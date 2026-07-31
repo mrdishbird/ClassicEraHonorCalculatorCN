@@ -1,0 +1,22 @@
+import { ComponentFixtureAutoDetect, TestBed } from '@angular/core/testing';
+import { CalculatorComponent } from './calculator.component';
+import { NgIconsModule } from '@ng-icons/core';
+import { bootstrapClipboard, bootstrapDiscord, bootstrapChevronDoubleRight, bootstrapGithub, bootstrapGraphUpArrow, bootstrapArrowDownCircleFill, bootstrapDash, bootstrapPlus, bootstrapQuestionCircle } from '@ng-icons/bootstrap-icons';
+import { simpleCurseforge } from '@ng-icons/simple-icons';
+import { provideTranslateService, TranslateLoader, TranslateNoOpLoader } from '@ngx-translate/core';
+
+describe('CalculatorComponent', () => {
+  beforeEach(() => TestBed.configureTestingModule({
+    providers: [
+        { provider: ComponentFixtureAutoDetect, useValue: true },
+        provideTranslateService({ fallbackLang: 'en', loader: { provide: TranslateLoader, useClass: TranslateNoOpLoader } })
+    ],
+    imports: [NgIconsModule.withIcons({ bootstrapClipboard, bootstrapDiscord, bootstrapChevronDoubleRight, bootstrapGithub, bootstrapGraphUpArrow, simpleCurseforge, bootstrapPlus, bootstrapDash, bootstrapArrowDownCircleFill, bootstrapQuestionCircle }), CalculatorComponent]
+}));
+
+  it('should create the component', () => {
+    const fixture = TestBed.createComponent(CalculatorComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
+});

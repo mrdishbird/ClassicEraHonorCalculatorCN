@@ -1,0 +1,55 @@
+.progressbar-milestone
+{
+    border-right: 1px solid #fff;
+    text-align: right;
+    box-sizing: content-box;
+}
+
+.setrating-button, .progressbar-milestone-button {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.progressbar-milestone:hover .progressbar-milestone-button>ng-icon, .setrating-button-container:hover .setrating-button>ng-icon
+{
+    opacity: 1;
+}
+
+.custom-danger-popover {
+    border-color: var(--bs-danger) !important;
+}
+.custom-danger-popover .popover-header
+{
+    background-color: var(--bs-danger) !important;
+    color: var(--bs-white) !important;
+}
+.custom-danger-popover .popover-header::before
+{
+    border-bottom-color: var(--bs-danger) !important;
+}
+.custom-danger-popover .popover-arrow:after {
+    border-top-color: var(--bs-danger) !important;;
+    border-bottom-color: var(--bs-danger) !important;
+}
+
+.experimental-popover {
+    border-color: var(--bs-warning) !important;
+    border-radius: var(--bs-border-radius-lg) !important;
+}
+.experimental-popover .popover-header
+{
+    background-color: var(--bs-warning) !important;
+    color: var(--bs-black) !important;
+}
+.experimental-popover .popover-header::before
+{
+    border-bottom-color: var(--bs-warning) !important;
+}
+.experimental-popover .popover-arrow:after {
+    border-top-color: var(--bs-warning) !important;;
+    border-bottom-color: var(--bs-warning) !important;
+}
