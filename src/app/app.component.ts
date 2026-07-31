@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { provideIcons } from '@ng-icons/core';
 import { bootstrapClipboard, bootstrapDiscord, bootstrapChevronDoubleRight, bootstrapGithub, bootstrapGraphUpArrow, bootstrapPlus, bootstrapDash, bootstrapArrowDownCircleFill, bootstrapQuestionCircle, bootstrapExclamationTriangleFill, bootstrap123, bootstrapInfoCircleFill, bootstrapArrowBarRight } from '@ng-icons/bootstrap-icons';
 import { simpleCurseforge } from '@ng-icons/simple-icons';
+import { inject as injectVercelAnalytics } from '@vercel/analytics';
 
 @Component({
     selector: 'app-root',
@@ -14,4 +15,7 @@ import { simpleCurseforge } from '@ng-icons/simple-icons';
     viewProviders: [provideIcons({ bootstrapClipboard, bootstrapDiscord, bootstrapChevronDoubleRight, bootstrapGithub, bootstrapGraphUpArrow, simpleCurseforge, bootstrapPlus, bootstrapDash, bootstrapArrowDownCircleFill, bootstrapQuestionCircle, bootstrapExclamationTriangleFill, bootstrap123, bootstrapInfoCircleFill, bootstrapArrowBarRight })]
 })
 export class AppComponent {
+    constructor() {
+        injectVercelAnalytics({ framework: 'angular' });
+    }
 }
